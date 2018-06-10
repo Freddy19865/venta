@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//parte administrativa
+Route::resource('clients','client\ClientController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
